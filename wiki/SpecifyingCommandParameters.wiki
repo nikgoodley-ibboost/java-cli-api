@@ -3,3 +3,5 @@
 
 
 To specify parameters accepted by your Command implementation, annotate field members of the class by using [http://jcommander.org/ JCommander] annotations.
+
+An example of this is seen in the [http://code.google.com/p/java-cli-api/source/browse/trunk/sample-cli-client/src/main/java/com/ballew/samples/cli/client/commands/AddUserCommand.java AddUserCommand] contained within the Sample CLI Client.
