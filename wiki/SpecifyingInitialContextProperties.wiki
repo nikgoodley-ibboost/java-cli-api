@@ -1,0 +1,24 @@
+#summary How to specify initial context properties
+
+For some applications, properties may want to be loaded on startup. Some of these properties might be internally set, while some might want to sit outside of the JAR file to be configured by the user.
+
+An example use case for this may be an application that interacts with a web service. The property file may want to specify a {{{host}}} property that determines which web host to contact. This way, the user does not have to specify the host every time the application is run, but the user may be able to run a {{{changehost}}} command that replaces the property in the context.
+
+To specify the property, you should override the {{{getExternalPropertiesFile}}} function of the {{{CLIContext}}}.
+
+For example, in SampleCLIContext.java, we have:
+{{{
+/**
+         * Specify the property file used by this context to load
+         * initial properties from. This property file should sit outside of
+         * the final jar file.
+         */
+        @Override
+        protected File getExternalPropertiesFile() {
+                return new File("sample_client.properties");
+        }
+}}}
+
+This means that {{{sample_client.properties}}} may sit next to the JAR file, and its properties will be loaded into the context on startup.
+
+The function {{{getInternalPropertiesFile()}}} can point to a file inside of the JAR, allowing the application developer to specify properties that should be loaded on startup, but should not be exposed to the user.
