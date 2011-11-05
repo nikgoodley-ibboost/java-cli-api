@@ -1,0 +1,5 @@
+#summary This page documents how to specify parameters for commands.
+#labels command,parameter,jcommander,annotation
+
+
+To specify parameters accepted by your Command implementation, annotate field members of the class by using [http://jcommander.org/ JCommander] annotations.
