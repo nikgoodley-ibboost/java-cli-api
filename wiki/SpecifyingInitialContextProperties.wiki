@@ -14,11 +14,11 @@ For example, in SampleCLIContext.java, we have:
          * the final jar file.
          */
         @Override
-        protected File getExternalPropertiesFile() {
+        protected StringgetExternalPropertiesFile() {
                 return new File("sample_client.properties");
         }
 }}}
 
 This means that {{{sample_client.properties}}} may sit next to the JAR file, and its properties will be loaded into the context on startup.
 
-The function {{{getInternalPropertiesFile()}}} can point to a file inside of the JAR, allowing the application developer to specify properties that should be loaded on startup, but should not be exposed to the user.
+The function {{{getInternalPropertiesFilename()}}} can specify a resource name. This allows the application developer to specify properties that should be loaded on startup, but could be located inside the built JAR and not be exposed to the user.
