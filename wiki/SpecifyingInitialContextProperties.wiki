@@ -19,6 +19,6 @@ For example, in SampleCLIContext.java, we have:
         }
 }}}
 
-This means that {{{sample_client.properties}}} may sit next to the JAR file, and its properties will be loaded into the context on startup.
+This means that {{{sample_client.properties}}} may sit next to the JAR file, and its properties will be loaded into the context on startup. While the sample does not include this, it may be a good idea to have the property file inside your resources, and then have it copied next to the final JAR during the build process.
 
-The function {{{getInternalPropertiesFilename()}}} can specify a resource name. This allows the application developer to specify properties that should be loaded on startup, but could be located inside the built JAR and not be exposed to the user.
+The function {{{getInternalPropertiesFilename()}}} can specify a resource name to load properties from. This allows the application developer to specify a location of properties that should be loaded on startup, but could be located inside the built JAR and not be exposed to the user.
