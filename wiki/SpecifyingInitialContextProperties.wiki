@@ -14,7 +14,7 @@ For example, in SampleCLIContext.java, we have:
          * the final jar file.
          */
         @Override
-        protected StringgetExternalPropertiesFile() {
+        protected String getExternalPropertiesFile() {
                 return new File("sample_client.properties");
         }
 }}}
