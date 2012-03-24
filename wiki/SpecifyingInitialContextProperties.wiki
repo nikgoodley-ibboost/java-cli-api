@@ -31,4 +31,4 @@ The Sample CLI Client demonstrates the use of context initialization by doing th
 
 Note that by specifying {{{new File("sample_client.properties")}}}, we are essentially saying the {{{sample_client.properties}}} file has to be in the working directory, not next to the JAR file. You may want to specify a fully-qualified file path, such as {{{new File("/etc/myapplication/sample_client.properties")}}}.
 
-To see the sample client load the properties, you can execute the command {{{getproperty -p embedded_property_one}}} or {{{getproperty -p external_property_one}}}. This will invoke the GetPropertyCommand, which simply outputs the value of a context key (and these keys were defined in the sample property files).
+To see the sample client load the properties, you can execute the command {{{getproperty -p embedded_property_one}}} or {{{getproperty -p external_property_one}}}. This will invoke the {{{GetPropertyCommand}}}, which simply outputs the value of a context key (and these keys were defined in the sample property files).
